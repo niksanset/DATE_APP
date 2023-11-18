@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create user</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+
+
+
+</style>
+<body>
+    <h1>Регистрация </h1>
+    <form method = "POST">
+        {% csrf_token %}
+        <p>Имя</p>
+        <input type="text" name="first_name_user">
+        <p>Фамилия</p>
+        <input type="text" name="last_name_user">
+        <p>Логин</p>
+        <input type="text" name="login_user">
+        <p>Пароль</p>
+        <input type="text" name="password_user">
+        <p>Возраст</p>
+        <input type="number" name="age_user">
+        <p>О себе</p>
+        <input type="text" name="about_user">
+        <p>Хобби</p>
+        <input type="text" name="hobby_user">
+        <p>Любимая музыка</p>
+        <input type="text" name="music_user">
+        <p>Любимые фильмы</p>
+        <input type="text" name="films_user">
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

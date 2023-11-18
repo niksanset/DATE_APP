@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User detail</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+
+
+
+</style>
+<body>
+  <div>
+    <h1 style="text-align: center;">{{ human.first_name_user }}  {{ human.last_name_user }}</h1>
+    <img style="border-radius: 5%;height: 80%;width: 40%; position: relative; left:550px " src="{% static "/2.webp" %}" alt="">
+    <h1 style="text-align: center;">INFO:</h1>
+    <h1>Age: <p>{{ human.age_user }}</p></h1>
+    <h1>About self: <p>{{ human.about_user }}</p></h1>
+    <h1>Hobby: <p>{{ human.hobby_user }}</p></h1>
+    <h1>Favorite music: <p>{{ human.music_user }}</p></h1>
+    <h1>Favorite films: <p>{{ human.films_user }}</p></h1>
+  
+
+
+
+  </div>
+
+    
+</body>
+</html>

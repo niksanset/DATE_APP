@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+</head>
+<style>
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.user_info {
+    position: absolute;
+    left: 930px;
+    top: 100px;
+
+  
+
+}
+.nav {
+    width: 100%;
+    min-height: 70px;
+    text-align: center;
+}
+button {
+    width: 200px;
+}
+img {
+    border-radius: 5%;
+}
+
+
+
+
+
+</style>
+<body>
+    <div class="nav">
+        <h1>Profile list page</h1>
+        <a href="create_profile/">Create profile</a>
+
+    </div>
+    <div class="user_info">
+
+        {% for human in human_list %}
+        <h1 style="padding-top: 50px;"> {{ human.first_name_user }} {{ human.last_name_user }}</h1>
+        <img style="width: 40%; height: 40%;" src="{% static "/2.webp" %}" alt="">
+          <a href="{% url 'human' human.slug %}"><button style="position: relative; left: 60px; bottom: 130px;">Detail</button></a>
+    {% endfor %}
+    </div>
+
+
+
+
+
+
+    
+</body>
+</html>
